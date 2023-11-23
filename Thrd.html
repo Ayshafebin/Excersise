@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+ /*Create a function that takes the dimensions of two triangles (as arrays) and checks if the first triangle fits into the second one.
+
+Examples
+doesTriangleFit([1, 1, 1], [1, 1, 1]) ➞ true
+
+doesTriangleFit([1, 1, 1], [2, 2, 2]) ➞ true
+
+doesTriangleFit([1, 2, 3], [1, 2, 2]) ➞ false
+
+doesTriangleFit([1, 2, 4], [1, 2, 6]) ➞ false */ 
+
+function doesTriangleFit(triangle1, triangle2) {
+    
+  const fits = triangle1.every((side, index) => side <= triangle2[index]);
+
+  return fits;
+}
+
+console.log(doesTriangleFit([1, 1, 1], [1, 1, 1])); // true
+console.log(doesTriangleFit([1, 1, 1], [2, 2, 2])); // true
+console.log(doesTriangleFit([1, 2, 3], [1, 2, 2])); // false
+console.log(doesTriangleFit([1, 2, 4], [1, 2, 6])); // false
+
+    
+    </script>
+</body>
+</html>
