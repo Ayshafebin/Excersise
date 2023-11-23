@@ -21,21 +21,14 @@ doesTriangleFit([1, 2, 3], [1, 2, 2]) ➞ false
 doesTriangleFit([1, 2, 4], [1, 2, 6]) ➞ false */ 
 
 function doesTriangleFit(triangle1, triangle2) {
-  // Sort the sides of each triangle in ascending order
-  const sortedTriangle1 = triangle1.slice().sort((a, b) => a - b);
+
+    const sortedTriangle1 = triangle1.slice().sort((a, b) => a - b);
   const sortedTriangle2 = triangle2.slice().sort((a, b) => a - b);
 
-  // Check if each side of triangle1 is less than or equal to the corresponding side of triangle2
   const fits = sortedTriangle1.every((side, index) => side <= sortedTriangle2[index]);
 
   return fits;
 }
-
-// Examples
-console.log(doesTriangleFit([1, 1, 1], [1, 1, 1])); // true
-console.log(doesTriangleFit([1, 1, 1], [2, 2, 2])); // true
-console.log(doesTriangleFit([1, 2, 3], [1, 2, 2])); // false
-console.log(doesTriangleFit([1, 2, 4], [1, 2, 6])); // false
 
 
 console.log(doesTriangleFit([1, 1, 1], [1, 1, 1])); // true
