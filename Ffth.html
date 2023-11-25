@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Write a function that moves all the zeroes to the end of an array. 
+// Do this without returning a copy of the input array.
+
+// Examples
+// zeroesToEnd([1, 2, 0, 0, 4, 0, 5]) ➞ [1, 2, 4, 5, 0, 0, 0]
+
+// zeroesToEnd([0, 0, 2, 0, 5]) ➞ [2, 5, 0, 0, 0]
+
+// zeroesToEnd([4, 4, 5]) ➞ [4, 4, 5]
+
+// zeroesToEnd([0, 0]) ➞ [0, 0]
+
+
+function zeroesToEnd(arr) {
+    let nonZeroIndex = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== 0) {
+
+            [arr[i], arr[nonZeroIndex]] = [arr[nonZeroIndex], arr[i]];
+            nonZeroIndex++;
+        }
+    }
+
+    return arr;
+}
+
+console.log(zeroesToEnd([1, 2, 0, 0, 4, 0, 5])); // [1, 2, 4, 5, 0, 0, 0]
+console.log(zeroesToEnd([0, 0, 2, 0, 5]));       // [2, 5, 0, 0, 0]
+console.log(zeroesToEnd([4, 4, 5]));             // [4, 4, 5]
+console.log(zeroesToEnd([0, 0]));                 // [0, 0]
+
+
+
+    </script>
+</body>
+</html>
