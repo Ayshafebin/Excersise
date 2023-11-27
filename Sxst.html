@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// Create a function that determines how many number pairs are embedded in a space-separated string.
+//  The first numeric value in the space-separated string represents the 
+//  count of the numbers, thus, excluded in the pairings.
+
+// Examples
+// number_pairs("7 1 2 1 2 1 3 2") ➞ 2
+// // (1, 1), (2, 2)
+
+// number_pairs("9 10 20 20 10 10 30 50 10 20") ➞ 3
+// // (10, 10), (20, 20), (10, 10)
+
+// number_pairs("4 2 3 4 1") ➞ 0
+// // Although two 4's are present, the first one is discounted. 
+
+function numberPairs(str) {
+  const numbers = str.split(' ').map(Number);
+
+  const count = numbers.shift();
+
+  let pairCount = 0;
+
+  const frequencyMap = {};
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    
+    if (frequencyMap[num]) {
+      pairCount++;
+      frequencyMap[num]--;
+    } else {
+      frequencyMap[num] = (frequencyMap[num] || 0) + 1;
+    }
+  }
+
+  return pairCount;
+}
+
+console.log(numberPairs("7 1 2 1 2 1 3 2")); // 2
+console.log(numberPairs("9 10 20 20 10 10 30 50 10 20")); // 3
+console.log(numberPairs("4 2 3 4 1")); // 0
+
+    </script>
+</body>
+</html>
