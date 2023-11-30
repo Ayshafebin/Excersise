@@ -25,16 +25,16 @@
             })
         }
 
-        Promise.all([Name(), Number()])
-        .then((rslt) => {
-            console.log(rslt);
-        })
-
-        // async function Result(){
-        //     let rslt = await Number();
+        // Promise.all([Name(), Number()])
+        // .then((rslt) => {
         //     console.log(rslt);
-        // }
-        // Result()
+        // })
+
+        async function Result(){
+            let rslt = await Number();
+            console.log(rslt);
+        }
+        Result()
 
 
         // function name(){
