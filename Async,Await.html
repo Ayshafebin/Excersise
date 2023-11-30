@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function Name(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('Aysha');
+                },3000);
+            })
+        }
+        function Number(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('9889');
+                })
+            })
+        }
+
+        Promise.all([Name(), Number()])
+        .then((rslt) => {
+            console.log(rslt);
+        })
+
+        // async function Result(){
+        //     let rslt = await Number();
+        //     console.log(rslt);
+        // }
+        // Result()
+
+
+        // function name(){
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve('Aysha');
+        //         },2000);
+        //     })
+        // }
+        //  async function setName(){
+        //     let rslt = await name();
+        //     console.log(rslt);
+        //  }
+        //  setName();
+
+
+
+    </script>
+</body>
+</html>
