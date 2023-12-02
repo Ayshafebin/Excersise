@@ -29,33 +29,33 @@
         // Multi Promises=======================================
 
 
-        function add(num1, num2){
-            return new Promise((resolve, reject) =>{
-                if(num1 == 0){
-                    reject("First number is zero");
-                }
-                resolve(num1 + num2);
-            })
-        }
+        // function add(num1, num2){
+        //     return new Promise((resolve, reject) =>{
+        //         if(num1 == 0){
+        //             reject("First number is zero");
+        //         }
+        //         resolve(num1 + num2);
+        //     })
+        // }
 
-        function multiple(num1,num2){
-            return new Promise((resolve, reject) => {
-                if(num2 == 0){
-                    reject('Second number is zero');
-                }
-                resolve(num1 * num2);
-            })
-        }
-        add(30,20).then((sum) => {
-            console.log(sum);
-            return multiple(sum,0)
-        })
-        .then((a) => {
-            console.log(a);
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+        // function multiple(num1,num2){
+        //     return new Promise((resolve, reject) => {
+        //         if(num2 == 0){
+        //             reject('Second number is zero');
+        //         }
+        //         resolve(num1 * num2);
+        //     })
+        // }
+        // add(30,20).then((sum) => {
+        //     console.log(sum);
+        //     return multiple(sum,0)
+        // })
+        // .then((a) => {
+        //     console.log(a);
+        // })
+        // .catch((err) => {
+        //     console.log(err);
+        // })
 
 
 
