@@ -10,15 +10,25 @@
 
     <script>
 
-        function add(c, d, callback){
-            const rslt = c + d;
-            callback(rslt)
+        function add(l, m, callback){
+            const str = l + m;
+            callback(str);
         }
 
-        function sum(rslt){
-            console.log('The result is : ' , rslt);
+        function sum(str){
+            console.log('The result is : ' , str);
         }
-        add(10,20,sum)
+        add(20, 20, sum);
+
+        // function add(c, d, callback){
+        //     const rslt = c + d;
+        //     callback(rslt)
+        // }
+
+        // function sum(rslt){
+        //     console.log('The result is : ' , rslt);
+        // }
+        // add(10,20,sum)
 
 
     </script>
