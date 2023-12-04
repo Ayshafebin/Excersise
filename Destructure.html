@@ -10,9 +10,14 @@
 
     <script>
 
-const person = { name: 'John', age: 30, city: 'New York' };
-const { name, age, city } = person;
+const person = { 
+    name: 'John', 
+    age: 30, 
+    city: 'New York' };
+const { name,...c } = person;
 console.log(name);
+console.log(c);
+
 
 
 const arr = [1,2,3,4];

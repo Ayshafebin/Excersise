@@ -11,12 +11,15 @@
     <script>
 
        const arr = [1,2,3,4,5];
-       const [a,b,c,d,e] = arr;
+       const [a,b,...c] = arr;
        console.log(a);
+       console.log(b);
+       console.log(c);
 
        const name = ['a','y','s','h','a'];
-       const [w,o,r,t,y] = name;
-       console.log(t,y);
+       const [w,o,...m] = name;
+       console.log(m);
+      
 
         
 
