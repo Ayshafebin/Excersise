@@ -107,26 +107,7 @@
         //     console.error(error)
         // })
 
-        const asyncpro = async () => {
-            try {
-                const pro = new Promise ((resolve,reject) => {
-                const success = true;
-                if(success){
-                    resolve('working');
-                }else{
-                    reject('Error');
-                }
-             })
-
-             const rslt = await pro;
-             console.log(rslt);
-
-            } catch(error){
-                console.error(error);
-            }
-        }
-
-        asyncpro()
+        
 
 
 
