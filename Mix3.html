@@ -10,10 +10,123 @@
 
     <script>
 
-        const arr = [1,2,3,4,5];
-        const str = arr.map(x => x*2)
-        console.log(str);
+        // const arr = [1,2,3,4,5];
+        // const str = arr.map(x => x*2)
+        // console.log(str);
 
+        // const arr = [1,2,3,4,5];
+        // const str = arr.filter(x => x%2 == 0)
+        // console.log(str);
+
+        // const arr1 = [1,2,3,4,5];
+        // const str1 = arr1.filter(y => y%2 == 1)
+        // console.log(str1);
+
+        // const arr = [1,2,3,4,5]
+        // const str = arr.reduce((x,y) => x+y)
+        // console.log(str);
+
+        // const arr = [1,2,3,4,5]
+        // arr.forEach(x => {
+        //     console.log(x*5);
+        // })
+
+        // const arr = ['asd','wer','rtyu','fgh','yui']
+        // const str = arr.slice(3,5);
+        // console.log(str);
+
+        // const arr = ['aaa','bbb','ccc','ddd'];
+        // const str = arr.splice(2,1,'fff')
+        // console.log(arr);
+
+        // const arr = [1,2,3,4,5]
+        // arr.push(6,7)
+        // console.log(arr);
+
+        // const arr = [1,2,3,4,5]
+        // arr.pop()
+        // console.log(arr);
+
+        // const arr = [0,1,2,3,4,5]
+        // arr.shift()
+        // console.log(arr);
+
+        // const arr = [2,3,4,5]
+        // arr.unshift(1)
+        // console.log(arr);
+
+        // const arr = [1,2,3,4,5]
+        // const str = [...arr,6,7]
+        // console.log(str);
+
+        // function sum(...rst){
+        //     return rst.reduce((x,y) => x+y)
+        // }
+        // console.log(sum(1,2,3,4,5));
+
+        // const arr = [1,2,3,4,5]
+        // const [a,b,c,d,e] = arr
+        // console.log(a,b,c);
+
+        // const arr1 = [1,2,3,4,5]
+        // const [g, ,...aa] = arr1
+        // console.log(g,aa);
+
+        // const person = {
+        //     name : 'aysha',
+        //     age : 22,
+        //     place : 'acm'
+        // }
+        // const {name,age,place} = person
+        // console.log(name);
+
+        // const person = {
+        //     name : 'febi',
+        //     age : 22,
+        //     place : 'acm'
+        // }
+        // const {...p} = person
+        // console.log(p);
+
+        // fetch('https://dummyjson.com/quotes')
+        // .then(response => response.json())
+        // .then(data => console.log(data))
+
+        // const pro = new Promise((resolve,reject) => {
+        //     const success = true;
+        //     if(success){
+        //         resolve('Working')
+        //     }else {
+        //         reject('Error')
+        //     }
+        // })
+        // pro.then((rslt) =>{
+        //     console.log(rslt)
+        // })
+        // .catch((error) => {
+        //     console.error(error)
+        // })
+
+        const asyncpro = async () => {
+            try {
+                const pro = new Promise ((resolve,reject) => {
+                const success = true;
+                if(success){
+                    resolve('working');
+                }else{
+                    reject('Error');
+                }
+             })
+
+             const rslt = await pro;
+             console.log(rslt);
+
+            } catch(error){
+                console.error(error);
+            }
+        }
+
+        asyncpro()
 
 
 
