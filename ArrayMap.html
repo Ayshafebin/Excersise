@@ -17,8 +17,12 @@
             {id: 4, title: 'frth'},
         ];
 
-        const str = data.map(x => x.title.toUpperCase());
+        // const str = data.map(x => x.title.toUpperCase());
+        // console.table(str)
+
+        const str = data.filter(x => x.id % 2 === 0)
         console.table(str)
+        
 
 
 
