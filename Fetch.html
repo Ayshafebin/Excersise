@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const fetching = async() => {
+            try {
+                const fet = await fetch('https://api.postalpincode.in/pincode/673307')
+                const data = await fet.json()
+                const datas = data[0].PostOffice
+                console.log(datas);
+            }
+            catch(error){
+                console.log(error);
+            }
+        }
+        fetching()
+
+
+    </script>
+</body>
+</html>
