@@ -129,23 +129,31 @@
 
 
 
-        const asyncfun = async() => {
-            try {
-                const pro = new Promise((resolve,reject) => {
-                    const success = true;
-                    if(success) {
-                        resolve('Working')
-                    }else {
-                        reject('Error')
-                    }
-                })
-                const rslt = await pro;
-                console.log(rslt);
-            }catch(error) {
-                console.error(error)
-            }
-        }
-        asyncfun()
+        // const asyncfun = async() => {
+        //     try {
+        //         const pro = new Promise((resolve,reject) => {
+        //             const success = true;
+        //             if(success) {
+        //                 resolve('Working')
+        //             }else {
+        //                 reject('Error')
+        //             }
+        //         })
+        //         const rslt = await pro;
+        //         console.log(rslt);
+        //     }catch(error) {
+        //         console.error(error)
+        //     }
+        // }
+        // asyncfun()
+
+        // const arr = [1,2,3,4,5]
+        // const str = arr.map(value => value * 2);
+        // console.log(str);
+
+        // const arr = [1,2,3,4,5,6,7,10];
+        // const str = arr.filter(value => value%2 === 1)
+        // console.log(str);
 
 
 
